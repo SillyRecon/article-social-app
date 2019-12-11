@@ -1,0 +1,33 @@
+{
+  "name": "article-rating-social-app",
+  "version": "1.0.0",
+  "description": "A Express JS Backend for a social application allowing users to post articles and rate the articles of others",
+  "main": "server.js",
+  "scripts": {
+    "start local" : "nodemon server.js local",
+    "start staging" : "nodemon server.js staging",
+    "start production" : "nodemon server.js production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SillyRecon/article-social-app.git"
+  },
+  "author": "Louis Hamilton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SillyRecon/article-social-app/issues"
+  },
+  "homepage": "https://github.com/SillyRecon/article-social-app#readme",
+  "dependencies" :{
+    "express"    : "*",
+    "mongoose"   : "*",
+    "morgan"     : "*",
+    "body-parser": "*",
+    "method-override": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "jasmine-node": "*"
+  }
+}
