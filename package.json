@@ -22,10 +22,14 @@
   "dependencies" :{
     "express"    : "*",
     "mongoose"   : "*",
+    "chalk"      : "*",
     "express-session": "*",
     "morgan"     : "*",
     "body-parser": "*",
-    "method-override": "*"
+    "method-override": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
   },
   "devDependencies": {
     "nodemon": "^2.0.2",
