@@ -29,13 +29,15 @@
     "method-override": "*",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "bcrypt" : "*"
   },
   "devDependencies": {
     "nodemon": "^2.0.2",
     "mocha" : "*",
     "chai": "*",
     "chai-http": "*",
-    "sinon": "*"
+    "sinon": "*",
+    "sinon-mongoose" : "*"
   }
 }
