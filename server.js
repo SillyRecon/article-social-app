@@ -1,15 +1,27 @@
 const express  = require('express');
+
 const passport = require('passport');
+
 const mongoose = require('mongoose');//mongoose, a driver to connect to mongodb
+
 const morgan = require('morgan'); // log requests to the console
+
 const bodyParser = require('body-parser');// pull information from HTML POST
+
 const methodOverride = require('method-override');// simulate DELETE and PUT
+
 const chalk = require('chalk');
+
+
 //const config = require('./config')();//access to config
 var session = require('express-session');
+
 var users = require('./routes/users');
+
 var index = require('./routes/index');
+
 var app = express();//create the app w/ express
+
 
 // Connect to MongoDB
 mongoose.connect('mongodb://henry:MaryScots@127.0.0.1:27017/rocket', {useNewUrlParser: true});
