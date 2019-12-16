@@ -22,17 +22,3 @@ describe("Testing the Server", function() {
   });
 
 });
-
-describe("Testing the Index", function() {
-  //Testing access to the index page
-  it('should get the root page on / GET', function(done) {
-    chai.request(app)
-      .get('/')
-      .end(function(err, res){
-        should.exist(res);
-        res.should.have.status(200);
-        done();
-      });
-  });
-
-});

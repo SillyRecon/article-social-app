@@ -1,14 +1,15 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
+var should = chai.should();
 
 chai.use(chaiHttp);
 var app = require('../server');
 
-describe("Testing GET user login/register page", function() {
+describe("Testing GET user /users/register page", function() {
   //Testing access to the login page
-  it('should get the user login page on /user/login GET', function(done) {
+  it('should get the user login page on /users/login GET', function(done) {
     chai.request(app)
-      .get('/user/login')
+      .get('/users/login')
       .end(function(err, res){
         should.exist(res);
         res.should.have.status(200);
@@ -16,9 +17,9 @@ describe("Testing GET user login/register page", function() {
       });
   });
   //Testing access to the register page
-  it('should get the user login page on /user/register GET', function(done) {
+  it('should get the user login page on /users/register GET', function(done) {
     chai.request(app)
-      .get('/user/register')
+      .get('/users/register')
       .end(function(err, res){
         should.exist(res);
         res.should.have.status(200);
@@ -28,11 +29,11 @@ describe("Testing GET user login/register page", function() {
 
 });
 
-describe("Testing POST user login/register page", function() {
+describe("Testing POST user /users/register page", function() {
   //Testing post to the login page
-  it('should post to the user login page on /user/login POST', function(done) {
+  it('should post to the user login page on /users/login POST', function(done) {
     chai.request(app)
-     .post('/auth/register')
+     .post('/users/register')
      .send({
         username: 'louis',
         password: 'paris'
@@ -44,9 +45,9 @@ describe("Testing POST user login/register page", function() {
      });
   });
   //Testing post to the register page
-  it('should post to the user login page on /user/register POST', function(done) {
+  it('should post to the user login page on /users/register POST', function(done) {
     chai.request(app)
-      .post('/auth/register')
+      .post('/users/register')
       .send({
         username: 'louis',
         password: 'paris'

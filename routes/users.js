@@ -5,13 +5,13 @@ var router = express.Router();
 const passport = require('passport');
 const User = require('../models/User');
 
-router.get('/user/register', function(req, res) {
+router.get('/register', function(req, res) {
   //res.render('register', {});
   res.set('Content-Type', 'text/plain');
   res.status(200).send('Welcome to registration');
 });
 
-router.post('/user/register', function(req, res, next) {
+router.post('/register', function(req, res, next) {
 
  const user = new User({
    email: req.body.email,
@@ -36,13 +36,13 @@ router.post('/user/register', function(req, res, next) {
  });
 });
 
-router.get('/user/login', function(req, res) {
+router.get('/login', function(req, res) {
   //res.render('login', {user: req.user, message: req.flash('error')});
   res.set('Content-Type', 'text/plain');
   res.status(200).send('Welcome to login');
 });
 
-router.post('/user/login', function(req, res, next) {
+router.post('/login', function(req, res, next) {
   passport.authenticate('local', (err, user, info) => {
     if (err) { return next(err); }
     if (!user) {
